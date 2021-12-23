@@ -1,0 +1,60 @@
+@options
+@packages
+-classpath
+'/home/fluctlights/eclipse-workspace/Exercise_3/target/classes:/home/fluctlights/eclipse-workspace/Exercise_3/target/test-classes:/home/fluctlights/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar:/home/fluctlights/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/fluctlights/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar:/home/fluctlights/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/fluctlights/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar:/home/fluctlights/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar:/home/fluctlights/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.1/junit-jupiter-params-5.7.1.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'/home/fluctlights/eclipse-workspace/Exercise_3/src/test/java'
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Exercise_3 0.0.1-SNAPSHOT Test API'
+-link
+'../apidocs'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' '/home/fluctlights/eclipse-workspace/Exercise_3/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Exercise_3 0.0.1-SNAPSHOT Test API'
+Exercise3_TheoreticalWork2.Exercise_3
+/home/fluctlights/eclipse-workspace/Exercise_3/target/classes = 1640284879873
+/home/fluctlights/eclipse-workspace/Exercise_3/target/test-classes = 1640284879893
+/home/fluctlights/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar = 1638361401338
+/home/fluctlights/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar = 1638361401314
+/home/fluctlights/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar = 1638361401346
+/home/fluctlights/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar = 1638361401314
+/home/fluctlights/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar = 1638361401338
+/home/fluctlights/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar = 1638361401374
+/home/fluctlights/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.1/junit-jupiter-params-5.7.1.jar = 1638361401434
+/home/fluctlights/eclipse-workspace/Exercise_3/src/test/java = 1640086454746
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/member-search-index.zip = 1640287003307
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/overview-tree.html = 1640287003299
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/allclasses-index.html = 1640287003311
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/allpackages-index.html = 1640287003315
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/deprecated-list.html = 1640287003315
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/element-list = 1640287003283
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/index-all.html = 1640287003307
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/type-search-index.js = 1640287003307
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/script.js = 1640287003323
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/constant-values.html = 1640287003291
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/stylesheet.css = 1640287003319
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/package-search-index.zip = 1640287003307
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/package-search-index.js = 1640287003307
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/member-search-index.js = 1640287003307
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/type-search-index.zip = 1640287003307
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/help-doc.html = 1640287003319
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/index.html = 1640287003319
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/allclasses.html = 1640287003315
+/home/fluctlights/eclipse-workspace/Exercise_3/target/site/testapidocs/search.js = 1640287003323
