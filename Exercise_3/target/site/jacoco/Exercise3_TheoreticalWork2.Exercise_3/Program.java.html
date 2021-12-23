@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Program.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Exercise_3</a> &gt; <a href="index.source.html" class="el_package">Exercise3_TheoreticalWork2.Exercise_3</a> &gt; <span class="el_source">Program.java</span></div><h1>Program.java</h1><pre class="source lang-java linenums">package Exercise3_TheoreticalWork2.Exercise_3;
+
+import java.util.InputMismatchException;
+
+public class Program {
+	/*Attributes for the first table*/
+	public int f_comp;
+	public int f_corr;
+	public int f_appr;
+
+	/*Attributes for the second table*/
+	public int modularity;
+	public int reusability;
+	public int analyzability;
+	public int modificable;
+	public int testable;
+
+<span class="fc" id="L18">	public Program() {}</span>
+
+	/*Part one*/
+	public void setComp(int c) {
+<span class="fc" id="L22">		this.f_comp = c;</span>
+<span class="fc" id="L23">	}</span>
+	public void setCorr(int c) {
+<span class="fc" id="L25">		this.f_corr = c;</span>
+<span class="fc" id="L26">	}</span>
+	public void setAppr(int c) {
+<span class="fc" id="L28">		this.f_appr = c;</span>
+<span class="fc" id="L29">	}</span>
+
+	/*Part two*/
+	public void setModularity(int c) {
+<span class="fc" id="L33">		this.modularity = c;</span>
+<span class="fc" id="L34">	}</span>
+	public void setReusability(int c) {
+<span class="fc" id="L36">		this.reusability = c;</span>
+<span class="fc" id="L37">	}</span>
+	public void setAnalyzability(int c) {
+<span class="fc" id="L39">		this.analyzability = c;</span>
+<span class="fc" id="L40">	}</span>
+	public void setModifiability(int c) {
+<span class="fc" id="L42">		this.modificable = c;</span>
+<span class="fc" id="L43">	}</span>
+	public void setTestability(int c) {
+<span class="fc" id="L45">		this.testable = c;</span>
+<span class="fc" id="L46">	}</span>
+
+	/*METHOD DEVELOPED*/
+
+	public boolean isCertificable() throws InvalidException {
+<span class="fc" id="L51">		boolean certified = false;</span>
+<span class="fc" id="L52">		int quality = -1;</span>
+		int functionalSuitability, maintainability;
+        int min_first, min_second;
+
+		try {
+            /*Functional completeness*/
+<span class="fc bfc" id="L58" title="All 4 branches covered.">            if (f_comp &gt;= 0 &amp;&amp; f_comp &lt; 10) {</span>
+<span class="fc" id="L59">                this.f_comp = 0;</span>
+<span class="fc" id="L60">            }</span>
+<span class="fc bfc" id="L61" title="All 4 branches covered.">            else if (f_comp &gt;= 10 &amp;&amp; f_comp &lt; 35) {</span>
+<span class="fc" id="L62">                this.f_comp = 1;</span>
+<span class="fc" id="L63">            }</span>
+<span class="fc bfc" id="L64" title="All 4 branches covered.">            else if (f_comp &gt;= 35 &amp;&amp; f_comp &lt; 70) {</span>
+<span class="fc" id="L65">                this.f_comp = 2;</span>
+<span class="fc" id="L66">            }</span>
+<span class="fc bfc" id="L67" title="All 4 branches covered.">            else if (f_comp &gt;= 70 &amp;&amp; f_comp &lt; 90) {</span>
+<span class="fc" id="L68">                this.f_comp = 3;</span>
+<span class="fc" id="L69">            }</span>
+<span class="pc bpc" id="L70" title="1 of 4 branches missed.">            else if (f_comp &gt;= 90 &amp;&amp; f_comp &lt;= 100) {</span>
+<span class="fc" id="L71">                this.f_comp = 4;</span>
+<span class="fc" id="L72">            }</span>
+            else {
+<span class="fc" id="L74">                this.f_comp = -1;</span>
+<span class="fc" id="L75">                throw new InvalidException();</span>
+            }
+
+            /*Functional Correctness*/
+<span class="pc bpc" id="L79" title="1 of 4 branches missed.">            if(f_corr &gt;= 0 &amp;&amp; f_corr &lt; 10) {</span>
+<span class="fc" id="L80">                this.f_corr = 0;</span>
+<span class="fc" id="L81">            }</span>
+<span class="pc bpc" id="L82" title="1 of 4 branches missed.">            else if (f_corr &gt;= 10 &amp;&amp; f_corr &lt; 50) {</span>
+<span class="fc" id="L83">                this.f_corr = 1;</span>
+<span class="fc" id="L84">            }</span>
+<span class="pc bpc" id="L85" title="1 of 4 branches missed.">            else if (f_corr &gt;= 50 &amp;&amp; f_corr &lt; 70) {</span>
+<span class="fc" id="L86">                this.f_corr = 2;</span>
+<span class="fc" id="L87">            }</span>
+<span class="pc bpc" id="L88" title="1 of 4 branches missed.">            else if (f_corr &gt;= 70 &amp;&amp; f_corr &lt; 90) {</span>
+<span class="fc" id="L89">                this.f_corr = 3;</span>
+<span class="fc" id="L90">            }</span>
+<span class="pc bpc" id="L91" title="1 of 4 branches missed.">            else if (f_corr &gt;= 90 &amp;&amp; f_corr &lt;= 100) {</span>
+<span class="fc" id="L92">                this.f_corr = 5;</span>
+<span class="fc" id="L93">            }</span>
+            else {
+<span class="fc" id="L95">                this.f_corr = -1;</span>
+<span class="fc" id="L96">                throw new InvalidException();</span>
+            }
+
+            /*Functional appropiateness*/
+<span class="pc bpc" id="L100" title="2 of 4 branches missed.">            if (f_appr &gt;= 0 &amp;&amp; f_appr &lt; 10) {</span>
+<span class="nc" id="L101">                this.f_appr = 0;</span>
+<span class="nc" id="L102">            }</span>
+<span class="pc bpc" id="L103" title="1 of 4 branches missed.">            else if (f_appr &gt;= 10 &amp;&amp; f_appr &lt; 50) {</span>
+<span class="fc" id="L104">                this.f_appr = 2;</span>
+<span class="fc" id="L105">            }</span>
+<span class="pc bpc" id="L106" title="1 of 4 branches missed.">            else if (f_appr &gt;= 50 &amp;&amp; f_appr &lt; 70) {</span>
+<span class="fc" id="L107">                this.f_appr = 3;</span>
+<span class="fc" id="L108">            }</span>
+<span class="pc bpc" id="L109" title="1 of 4 branches missed.">            else if (f_appr &gt;= 70 &amp;&amp; f_appr &lt; 90) {</span>
+<span class="fc" id="L110">                this.f_appr = 4;</span>
+<span class="fc" id="L111">            }</span>
+<span class="pc bpc" id="L112" title="2 of 4 branches missed.">            else if (f_appr &gt;= 90 &amp;&amp; f_appr &lt;= 100) {</span>
+<span class="fc" id="L113">                this.f_appr = 5;</span>
+<span class="fc" id="L114">            }</span>
+            else {
+<span class="nc" id="L116">                this.f_appr = -1;</span>
+<span class="nc" id="L117">                throw new InvalidException();</span>
+            }
+
+            /*Calculate the Functional Suitability*/
+<span class="fc" id="L121">            functionalSuitability = Math.min(this.f_comp, this.f_corr);</span>
+<span class="fc" id="L122">            functionalSuitability = Math.min(functionalSuitability, this.f_appr);</span>
+
+            /*Modularity*/
+<span class="pc bpc" id="L125" title="1 of 4 branches missed.">            if (modularity &gt;= 0 &amp;&amp; modularity &lt; 10) {</span>
+<span class="fc" id="L126">                this.modularity = 0;</span>
+<span class="fc" id="L127">            }</span>
+<span class="pc bpc" id="L128" title="1 of 4 branches missed.">            else if (modularity &gt;= 10 &amp;&amp; modularity &lt; 35) {</span>
+<span class="fc" id="L129">                this.modularity = 1;</span>
+<span class="fc" id="L130">            }</span>
+<span class="pc bpc" id="L131" title="1 of 4 branches missed.">            else if (modularity &gt;= 35 &amp;&amp; modularity &lt; 70) {</span>
+<span class="fc" id="L132">                this.modularity = 2;</span>
+<span class="fc" id="L133">            }</span>
+<span class="pc bpc" id="L134" title="1 of 4 branches missed.">            else if (modularity &gt;= 70 &amp;&amp; modularity &lt; 90) {</span>
+<span class="fc" id="L135">                this.modularity = 3;</span>
+<span class="fc" id="L136">            }</span>
+<span class="pc bpc" id="L137" title="2 of 4 branches missed.">            else if (modularity &gt;= 90 &amp;&amp; modularity &lt;= 100) {</span>
+<span class="fc" id="L138">                this.modularity = 4;</span>
+<span class="fc" id="L139">            }</span>
+            else {
+<span class="nc" id="L141">                this.modularity = -1;</span>
+<span class="nc" id="L142">                throw new InvalidException();</span>
+            }
+
+            /*Reusability*/
+<span class="pc bpc" id="L146" title="1 of 4 branches missed.">            if (reusability &gt;= 0 &amp;&amp; reusability &lt; 10) {</span>
+<span class="fc" id="L147">                this.reusability = 0;</span>
+<span class="fc" id="L148">            }</span>
+<span class="pc bpc" id="L149" title="1 of 4 branches missed.">            else if (reusability &gt;= 10 &amp;&amp; reusability &lt; 35) {</span>
+<span class="fc" id="L150">                this.reusability = 1;</span>
+<span class="fc" id="L151">            }</span>
+<span class="pc bpc" id="L152" title="1 of 4 branches missed.">            else if (reusability &gt;= 35 &amp;&amp; reusability &lt; 70) {</span>
+<span class="fc" id="L153">                this.reusability = 2;</span>
+<span class="fc" id="L154">            }</span>
+<span class="pc bpc" id="L155" title="1 of 4 branches missed.">            else if (reusability &gt;= 70 &amp;&amp; reusability &lt; 90) {</span>
+<span class="fc" id="L156">                this.reusability = 3;</span>
+<span class="fc" id="L157">            }</span>
+<span class="pc bpc" id="L158" title="2 of 4 branches missed.">            else if (reusability &gt;= 90 &amp;&amp; reusability &lt;= 100) {</span>
+<span class="fc" id="L159">                this.reusability = 5;</span>
+<span class="fc" id="L160">            }</span>
+            else {
+<span class="nc" id="L162">                this.reusability = -1;</span>
+<span class="nc" id="L163">                throw new InvalidException();</span>
+            }
+
+            /*Analyzability*/
+<span class="pc bpc" id="L167" title="1 of 4 branches missed.">            if (analyzability &gt;= 0 &amp;&amp; analyzability &lt; 35) {</span>
+<span class="fc" id="L168">                this.analyzability = 0;</span>
+<span class="fc" id="L169">            }</span>
+<span class="pc bpc" id="L170" title="1 of 4 branches missed.">            else if (analyzability &gt;= 35 &amp;&amp; analyzability &lt; 50) {</span>
+<span class="fc" id="L171">                this.analyzability = 1;</span>
+<span class="fc" id="L172">            }</span>
+<span class="pc bpc" id="L173" title="1 of 4 branches missed.">            else if (analyzability &gt;= 50 &amp;&amp; analyzability &lt; 70) {</span>
+<span class="fc" id="L174">                this.analyzability = 2;</span>
+<span class="fc" id="L175">            }</span>
+<span class="pc bpc" id="L176" title="2 of 4 branches missed.">            else if (analyzability &gt;= 70 &amp;&amp; analyzability &lt; 90) {</span>
+<span class="nc" id="L177">                this.analyzability = 3;</span>
+<span class="nc" id="L178">            }</span>
+<span class="pc bpc" id="L179" title="2 of 4 branches missed.">            else if (analyzability &gt;= 90 &amp;&amp; analyzability &lt;= 100) {</span>
+<span class="fc" id="L180">                this.analyzability = 5;</span>
+<span class="fc" id="L181">            }</span>
+            else {
+<span class="nc" id="L183">                this.analyzability = -1;</span>
+<span class="nc" id="L184">                throw new InvalidException();</span>
+            }
+
+            /*Modifiability*/
+<span class="pc bpc" id="L188" title="2 of 4 branches missed.">            if (modificable &gt;= 0 &amp;&amp; modificable &lt; 10) {</span>
+<span class="nc" id="L189">                this.modificable = 0;</span>
+<span class="nc" id="L190">            }</span>
+<span class="pc bpc" id="L191" title="1 of 4 branches missed.">            else if (modificable &gt;= 10 &amp;&amp; modificable &lt; 35) {</span>
+<span class="fc" id="L192">                this.modificable = 1;</span>
+<span class="fc" id="L193">            }</span>
+<span class="pc bpc" id="L194" title="1 of 4 branches missed.">            else if (modificable &gt;= 35 &amp;&amp; modificable &lt; 50) {</span>
+<span class="fc" id="L195">                this.modificable = 2;</span>
+<span class="fc" id="L196">            }</span>
+<span class="pc bpc" id="L197" title="1 of 4 branches missed.">            else if (modificable &gt;= 50 &amp;&amp; modificable &lt; 70) {</span>
+<span class="fc" id="L198">                this.modificable = 3;</span>
+<span class="fc" id="L199">            }</span>
+<span class="pc bpc" id="L200" title="2 of 4 branches missed.">            else if (modificable &gt;= 70 &amp;&amp; modificable &lt; 90) {</span>
+<span class="fc" id="L201">                this.modificable = 4;</span>
+<span class="fc" id="L202">            }</span>
+<span class="nc bnc" id="L203" title="All 4 branches missed.">            else if (modificable &gt;= 90 &amp;&amp; modificable &lt;= 100) {</span>
+<span class="nc" id="L204">                this.modificable = 5;</span>
+<span class="nc" id="L205">            }</span>
+            else {
+<span class="nc" id="L207">                this.modificable = -1;</span>
+<span class="nc" id="L208">                throw new InvalidException();</span>
+            }
+
+            /*Testability*/
+<span class="pc bpc" id="L212" title="1 of 4 branches missed.">            if (testable &gt;= 0 &amp;&amp; testable &lt; 10) {</span>
+<span class="fc" id="L213">                this.testable = 0;</span>
+<span class="fc" id="L214">            }</span>
+<span class="pc bpc" id="L215" title="1 of 4 branches missed.">            else if (testable &gt;= 10 &amp;&amp; testable &lt; 50) {</span>
+<span class="fc" id="L216">                this.testable = 1;</span>
+<span class="fc" id="L217">            }</span>
+<span class="pc bpc" id="L218" title="1 of 4 branches missed.">            else if (testable &gt;= 50 &amp;&amp; testable &lt; 70) {</span>
+<span class="fc" id="L219">                this.testable = 2;</span>
+<span class="fc" id="L220">            }</span>
+<span class="pc bpc" id="L221" title="2 of 4 branches missed.">            else if (testable &gt;= 70 &amp;&amp; testable &lt;= 100) {</span>
+<span class="fc" id="L222">                this.testable = 4;</span>
+<span class="fc" id="L223">            }</span>
+            else {
+<span class="nc" id="L225">                this.testable = -1;</span>
+<span class="nc" id="L226">                throw new InvalidException();</span>
+            }
+
+            /*Calculate the Maintainability*/
+<span class="fc" id="L230">            min_first = Math.min(this.modularity, this.reusability);</span>
+<span class="fc" id="L231">            min_second = Math.min(this.analyzability, this.modificable);</span>
+<span class="fc" id="L232">            maintainability = Math.min(min_first, min_second);</span>
+<span class="fc" id="L233">            maintainability = Math.min(maintainability, this.testable);</span>
+
+            /*Certifying a program, after computing both Functional Suitability and Maintainability values*/
+<span class="fc bfc" id="L236" title="All 2 branches covered.">            if(functionalSuitability == 3) {</span>
+<span class="pc bpc" id="L237" title="1 of 2 branches missed.">                if(maintainability &gt;= 3) {</span>
+<span class="fc" id="L238">                    quality = 3;</span>
+<span class="fc" id="L239">                    System.out.println(&quot;Program certified - Quality = &quot; + quality);</span>
+<span class="fc" id="L240">                    certified = true;</span>
+                }
+
+<span class="fc bfc" id="L243" title="All 2 branches covered.">            }else if(functionalSuitability == 4) {</span>
+<span class="pc bpc" id="L244" title="2 of 4 branches missed.">                if(maintainability &gt; 0 &amp;&amp; maintainability &lt;= 3) {</span>
+<span class="nc" id="L245">                    quality = 3;</span>
+<span class="nc" id="L246">                    System.out.println(&quot;Program certified - Quality = &quot; + quality);</span>
+<span class="nc" id="L247">                    certified = true;</span>
+
+<span class="pc bpc" id="L249" title="1 of 2 branches missed.">                }else if (maintainability == 4) {</span>
+<span class="fc" id="L250">                    quality = 4;</span>
+<span class="fc" id="L251">                    System.out.println(&quot;Program certified - Quality = &quot; + quality);</span>
+
+<span class="fc" id="L253">                    certified = true;</span>
+                }
+
+<span class="fc" id="L256">            }else { //less than 3</span>
+<span class="fc" id="L257">                System.out.println(&quot;Program NOT certified&quot;);</span>
+            }
+
+<span class="fc" id="L260">		}catch(InvalidException i) {</span>
+<span class="fc" id="L261">            System.out.println(i.getMessage());</span>
+<span class="fc" id="L262">            System.out.println(&quot;Program NOT certified&quot;);</span>
+<span class="fc" id="L263">            return certified;</span>
+        }
+		
+<span class="fc" id="L266">        return certified;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
